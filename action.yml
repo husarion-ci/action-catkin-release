@@ -1,0 +1,21 @@
+name: Do a catkin releases
+description: Perform a catkin release, bumping the specified version
+
+inputs:
+  github_token:
+    description: GitHub token to authenticate with
+    required: true
+  git_user:
+    description: username for the commit message
+    required: true
+  git_email:
+    description: e-mail address for the commit message
+    required: true
+  bump:
+    description: Which version to bump (major, minor or patch)
+    required: true
+    default: patch
+
+runs:
+  using: docker
+  image: Dockerfile
