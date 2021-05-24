@@ -72,7 +72,7 @@ jobs:
       -
         name: Catkin release
         id: catkin-release
-        uses: husarion-ci/catkin_release@v0.1.0
+        uses: husarion-ci/action-catkin-release@v0.1.0
         with:
           bump: patch
           github_token: ${{ secrets.GITHUB_TOKEN }}
