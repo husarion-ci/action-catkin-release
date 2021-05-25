@@ -18,7 +18,7 @@ git add $(find . -name CHANGELOG.rst)
 git commit -m "Update changelog"
 
 python3 /get_version.py $INPUT_BUMP
-source /env
+source /env.sh
 
 catkin_prepare_release --no-push --bump $NEW_VERSION -y
 
