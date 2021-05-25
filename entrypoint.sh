@@ -24,3 +24,5 @@ catkin_prepare_release --no-push --version $NEW_VERSION -y
 
 git push
 git push --tags
+
+echo "::set-output name=new_version::$NEW_VERSION"

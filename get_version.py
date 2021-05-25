@@ -63,7 +63,3 @@ if __name__ == '__main__':
 
     with open("/env.sh", "w") as env_file:
         env_file.write(f"#!/bin/bash\nexport NEW_VERSION={out_version}")
-
-    with open(os.environ.get("GITHUB_ENV"), "a") as env_file:
-        env_file.write(f"NEW_VERSION={out_version}")
-

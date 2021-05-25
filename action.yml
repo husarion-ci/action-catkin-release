@@ -15,6 +15,9 @@ inputs:
     description: Which version to bump (major, minor or patch)
     required: true
     default: patch
+outputs:
+  new_version:
+    description: Newest tag published to robo cart repo
 
 runs:
   using: docker
