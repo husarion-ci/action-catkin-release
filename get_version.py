@@ -59,6 +59,8 @@ if __name__ == '__main__':
     bump_version = BumpVersion(last_tag)
     out_version = bump_version.bump(bump)
 
+    print(f"setting new version: {out_version}")
+
     with open("/env.sh", "w") as env_file:
         env_file.write(f"#!/bin/bash\nexport NEW_VERSION={out_version}")
 

@@ -20,7 +20,7 @@ git commit -m "Update changelog"
 python3 /get_version.py $INPUT_BUMP
 source /env.sh
 
-catkin_prepare_release --no-push --bump $NEW_VERSION -y
+catkin_prepare_release --no-push --version $NEW_VERSION -y
 
 git push
 git push --tags
