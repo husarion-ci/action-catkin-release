@@ -44,7 +44,8 @@ bump:
 
 ## Outputs
 
-The action currently has no outputs.
+new_version:
+  description: Name of the new tag that will be pushed to repository.
 
 ## Example
 
