@@ -17,8 +17,11 @@ class BumpVersion:
             self.patch += 1
         elif bump_flag == "minor":
             self.minor += 1
+            self.patch = 0
         elif bump_flag == "major":
             self.major += 1
+            self.patch = 0
+            self.minor = 0
         else:
             print(f"unsupported bump flag {bump_flag}")
             sys.exit(1)
