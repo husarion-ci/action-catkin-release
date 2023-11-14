@@ -11,14 +11,10 @@ inputs:
   git_email:
     description: e-mail address for the commit message
     required: true
-  bump:
-    description: Which version to bump (major, minor or patch)
-    required: true
-    default: patch
-outputs:
   new_version:
-    description: Newest tag published to robo cart repo
-
+    description: New version that will be published
+    required: true
+    
 runs:
   using: docker
   image: Dockerfile
