@@ -17,12 +17,4 @@ catkin_generate_changelog -y --only-merges
 git add $(find . -name CHANGELOG.rst)
 git commit -m "Update changelog"
 
-python3 /get_version.py $INPUT_BUMP
-source /env.sh
-
-catkin_prepare_release --no-push --version $NEW_VERSION -y
-
-git push
-git push --tags
-
-echo "::set-output name=new_version::$NEW_VERSION"
+catkin_prepare_release --no-push --version $INPUT_NEW_VERSION -y
