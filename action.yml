@@ -11,10 +11,14 @@ inputs:
   git_email:
     description: e-mail address for the commit message
     required: true
+  first_release:
+    description: this is a first release
+    required: false
+    default: 'false'
   new_version:
     description: New version that will be published
     required: true
     
 runs:
   using: docker
-  image: Dockerfile
+  image: Dockerfile.no-ros
