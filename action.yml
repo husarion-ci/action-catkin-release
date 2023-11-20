@@ -1,4 +1,4 @@
-name: Do a catkin releases
+name: Do a catkin release
 description: Perform a catkin release, bumping the specified version
 
 inputs:
@@ -11,8 +11,12 @@ inputs:
   git_email:
     description: e-mail address for the commit message
     required: true
+  first_release:
+    description: this is a first release
+    required: false
+    default: 'false'
   new_version:
-    description: New version that will be published
+    description: new version that will be published
     required: true
     
 runs:

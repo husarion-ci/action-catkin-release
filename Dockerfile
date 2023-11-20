@@ -1,8 +1,10 @@
-FROM ghcr.io/alpine-ros/alpine-ros:noetic-3.17-ros-core
+FROM alpine:3.17
 
 RUN apk add --no-cache \
   git \
-  ros-noetic-catkin
+  py3-pip 
+
+RUN python3 -m pip install -U bloom catkin_pkg
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]

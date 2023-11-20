@@ -15,9 +15,9 @@ Only merge commits are included, so the recommended worklow is to update the mai
 branch via Pull Requests, and add short descriptions of changes in the PR commit
 messages.
 
-Afterwards, `catkin_prepare_release` is used to bump the version in the package.xml and create a new tag. This action doesn't push the tag. 
+Afterwards, `catkin_prepare_release` that does the following: https://docs.ros.org/en/humble/How-To-Guides/Releasing/First-Time-Release.html#bump-the-package-version. This action doesn't push the changes to the repository.
 
-The resault is two new commits.
+The result is two new commits.
 
 The action should be used in tandem with actions:
 - actions-ecosystem/action-get-latest-tag
@@ -40,11 +40,12 @@ git_user:
 git_email:
     description: e-mail address for the commit message
     required: true
+first_release:
+    description: this is a first release
+    required: false
+    default: 'false'
 new_version:
-    description: New version that will be published
+    description: new version that will be published
     required: true
 ```
 
-## Example
-
-TODO:
