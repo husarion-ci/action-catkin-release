@@ -21,4 +21,4 @@ inputs:
     
 runs:
   using: docker
-  image: Dockerfile.no-ros
+  image: Dockerfile
