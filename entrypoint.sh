@@ -2,9 +2,9 @@
 
 set -e
 
-echo "Bump: $INPUT_BUMP"
+echo "New version: $INPUT_NEW_VERSION"
 
-cd $GITHUB_WORKSPACE
+cd $GITHUB_WORKSPACE 
 
 echo -e "machine github.com\nlogin ${INPUT_GITHUB_TOKEN}" > ~/.netrc
 git config user.name "${INPUT_GIT_USER}"
